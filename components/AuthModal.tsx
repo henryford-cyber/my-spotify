@@ -26,17 +26,19 @@ useEffect(()=>{
         }
     }
     return ( 
-        <Modal 
-        title="Đăng nhập"
+        <Modal
+        className="mobi:w-[90%] mobi:max-w-[90%] mobi:h-[90vh] mobi:max-h-[95vh] sm:w-[90%] sm:max-w-[90%] "
+        
+        title="Đăng nhập vào Spotify"
         isOpen={isOpen}
-        description="Đang nhập bằng tài khoản của bạn hoặc đăng ký tài khoản mới"
+        description="By NamPhan"
         onChange={onChange}
         > 
 
             <Auth 
             theme="dark"
             magicLink
-            providers={['facebook','azure','github','spotify']} 
+            providers={['facebook','github']} 
             supabaseClient={supabaseClient} 
             appearance={
                 {theme:ThemeSupa,

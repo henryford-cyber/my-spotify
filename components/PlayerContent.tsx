@@ -43,9 +43,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     if (!nextSong) {
       return player.setId(player.ids[0]);
-    }
-    console.log("next");
-    
+    }  
     player.setId(nextSong);
   }
 
@@ -59,8 +57,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
 
     if (!previousSong) {
       return player.setId(player.ids[player.ids.length - 1]);
-    }
-    console.log("prev");
+    } 
     player.setId(previousSong);
   }
  

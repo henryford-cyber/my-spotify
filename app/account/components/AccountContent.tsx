@@ -36,7 +36,7 @@ const AccountContent = () => {
               <p className="hidden md:block font-semibold text-sm pl-1">
                Hồ sơ
               </p>
-              <h1 className=" text-white xs:text-3xl sm:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-bold">
+              <h1 className=" text-white mobi:text-3xl mobi:text-center sm:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-bold">
                 Tài khoản
               </h1>
               <div className="flex gap-2 pl-2">

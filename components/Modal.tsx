@@ -1,5 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import {IoMdClose}from "react-icons/io"
+import { twMerge } from "tailwind-merge";
 
 
 interface ModalProps{
@@ -8,6 +9,7 @@ interface ModalProps{
     title:string;
     description:string;
     children:React.ReactNode;
+    className?:string;
 }
 
 const Modal:React.FC<ModalProps> = ({
@@ -15,7 +17,8 @@ const Modal:React.FC<ModalProps> = ({
     onChange,
     title,
     description,
-    children
+    children,
+    className
 }) => {
     return ( 
          <Dialog.Root
@@ -32,7 +35,7 @@ const Modal:React.FC<ModalProps> = ({
                  inset-0
                  "/>
                 <Dialog.Content
-                className="
+                className={twMerge(`
                 fixed 
                 drop-shadow-md
                 border 
@@ -51,7 +54,7 @@ const Modal:React.FC<ModalProps> = ({
                 bg-neutral-800
                 p-[25px]
                 focus:ounline-none
-                ">
+                `,className)}>
                     <Dialog.Title
                     className="
                     text-xl
